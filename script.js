@@ -16,7 +16,7 @@ const cells = document.querySelectorAll('.cell');
 startGame();
 
 function startGame() {
-	document.querySelector(".endgame").style.display = "none";
+	//document.querySelector(".endgame").style.display = "none";
 	origBoard = Array.from(Array(9).keys());
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].innerText = '';
@@ -54,8 +54,9 @@ function checkWin(board, player) {
 
 function gameOver(gameWon) {
 	for (let index of winCombos[gameWon.index]) {
-		document.getElementById(index).style.backgroundColor =
-			gameWon.player == huPlayer ? "blue" : "red";
+		/*document.getElementById(index).style.backgroundColor =
+		    gameWon.player == huPlayer ? "blue" : "red";*/
+		    
 	}
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].removeEventListener('click', turnClick, false);
