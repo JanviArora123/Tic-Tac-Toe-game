@@ -2,21 +2,26 @@
 <html>
 <head>
 	<title>Tic Tac Toe</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	
-	<div id="container">
+
+	<div class="container">
+		<div class="row justify-content-center" style="margin-top: 3rem;">
+			<h1>Tic Tac Toe</h1>
+		</div>
+		<div class="row" style="margin-bottom: 3rem; margin-top: 3rem;">
 		<div id="sidebar_wrap">
-			<div id="sidebar">	
-		        <div id=characters>	
-					<div class = human > 
+			<div id="sidebar">
+		        <div id=characters>
+					<div class = human >
 						<img src="images/human.png">
 					</div>
 					<div id=vs> vs </div>
-					<div class = robot> 
+					<div class = robot>
 						<img src="images/robot.png">
 					</div>
 				</div>
@@ -44,16 +49,11 @@
 					</div>
 				</div>
 
-				<div>
-				    <div class="text"></div>
-				</div>
-				<button id="newgame" class="endgame" onClick="startGame()">New Game
-						<div class="text"></div>
-				</button>
-				
+				<button id="newgame" class="endgame" onClick="startGame()" >New Game</button>
+
 			</div>
 		</div>
-		
+
 		<div id="board_wrap">
 			<div class="board" id="board">
 				   <table>
@@ -77,7 +77,10 @@
 		</div>
 
 	</div>
+</div>
 
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 	<script type="text/javascript" src="script.js"></script>
 </body>
