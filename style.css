@@ -6,13 +6,13 @@ body {
 }
 
 body {
-  background-image: url(images/pattern_alt.png);
+  background-image: url(images/back1.png);
   background-color: #eaeaea;
   position: relative;
   font-family: 'Gloria Hallelujah', cursive; }
   body:before {
     content: '';
-    background-image: url(../dist/assets/pattern_alt.png);
+    background-image: url(../dist/assets/back1.png);
     width: 100%;
     height: 100%;
     position: absolute;
