@@ -6,21 +6,13 @@ body {
 }
 
 body {
-<<<<<<< HEAD
   background-image: url(images/pattern_alt.png);
-=======
-  background-image: url(images/back1.png);
->>>>>>> 35ce17b884283d20ad6cd8602ec1df74eb913ee1
   background-color: #eaeaea;
   position: relative;
   font-family: 'Gloria Hallelujah', cursive; }
   body:before {
     content: '';
-<<<<<<< HEAD
     background-image: url(../dist/assets/pattern_alt.png);
-=======
-    background-image: url(../dist/assets/back1.png);
->>>>>>> 35ce17b884283d20ad6cd8602ec1df74eb913ee1
     width: 100%;
     height: 100%;
     position: absolute;
