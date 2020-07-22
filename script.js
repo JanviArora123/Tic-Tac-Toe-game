@@ -13,14 +13,24 @@ const winCombos = [
 ]
 
 const cells = document.querySelectorAll('.cell');
+const active = document.getElementById("starting_player").getElementsByClassName("active");
 startGame();
 
 function startGame() {
 	//document.querySelector(".endgame").style.display = "none";
+	document.querySelector(".endgame .text").innerText = '';
 	origBoard = Array.from(Array(9).keys());
+	
+	for(var i = 0; i < active.length; i++)
+		var name = active[i].innerText;
+	
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].innerText = '';
 		cells[i].style.removeProperty('background-color');
+		if(name == 'Computer'){
+			name = '';
+			turn(bestSpot(), aiPlayer);
+		}
 		cells[i].addEventListener('click', turnClick, false);
 	}
 }
@@ -29,6 +39,8 @@ function turnClick(square) {
 	if (typeof origBoard[square.target.id] == 'number') {
 		turn(square.target.id, huPlayer)
 		if (!checkWin(origBoard, huPlayer) && !checkTie()) turn(bestSpot(), aiPlayer);
+		checkWin(origBoard, huPlayer);
+		checkTie();
 	}
 }
 
@@ -59,6 +71,7 @@ function gameOver(gameWon) {
 		    
 	}
 	for (var i = 0; i < cells.length; i++) {
+		cells[i].style.backgroundColor = "red";
 		cells[i].removeEventListener('click', turnClick, false);
 	}
 	declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose.");
