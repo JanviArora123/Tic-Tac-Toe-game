@@ -6,12 +6,12 @@ body {
 } 
 
 body {
-  background-image: url(images/pattern4.jpeg);
+  background-image: url(images/pattern04.jpeg);
   position: relative;
   font-family: 'Gloria Hallelujah', cursive; }
   body:before {
     content: '';
-    background-image: url(images/pattern4.jpeg);
+    background-image: url(images/pattern04.jpeg);
     background-size: cover;
       
     width: 100%;
